@@ -31,12 +31,6 @@ class StaffTest(TestCase):
 
 class StaffAPITest(APITestCase):
 
-    def setUp(self):
-        self.staff = Staff.objects.create(
-            first_name="Ikromjon",
-            last_name="Xusanov",
-            email="ikromjonkhusanov06@gmail.com"
-        )
 
     def test_check_staff_list(self):
         response = self.client.get(reverse('staff-list'))
