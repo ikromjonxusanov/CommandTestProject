@@ -19,7 +19,10 @@ DEBUG = env('DEBUG')
 
 ALLOWED_HOSTS = env('ALLOWED_HOSTS', cast=list)
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    'apps.common',
+    'apps.staff',
+]
 
 THIRD_PARTY_APPS = [
     'rest_framework',
