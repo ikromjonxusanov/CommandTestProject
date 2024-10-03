@@ -13,7 +13,7 @@ class Staff(BaseModel):
 
 
 class Team(BaseModel):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, unique=True)
     staff = models.ManyToManyField(Staff, through='TeamStaff')
 
     def __str__(self):
